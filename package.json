@@ -1,0 +1,23 @@
+{
+  "name": "actnode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anazermeno/actNode.git"
+  },
+  "author": "Ana Zermeno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anazermeno/actNode/issues"
+  },
+  "homepage": "https://github.com/anazermeno/actNode#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "request": "^2.88.2"
+  }
+}

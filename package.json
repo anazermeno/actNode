@@ -18,6 +18,8 @@
   "homepage": "https://github.com/anazermeno/actNode#readme",
   "dependencies": {
     "express": "^4.17.3",
-    "request": "^2.88.2"
+    "mysql": "^2.18.1",
+    "request": "^2.88.2",
+    "run": "^1.4.0"
   }
 }

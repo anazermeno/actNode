@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body style="background-color:rgb(204, 232, 193);">
+
+      <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Papeleria</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Catalogo </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contacto </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+      </div>
+
+        <div class = "container">
+            <h1> Papeleria UNO </h1>
+            
+
+          <div id="app" class = "row">
+            <div class = "col">
+                <h4> Agregar productos al carrito </h4>
+                <p>Lapices:</p>
+                <p ref="lapices">0</p>
+                <button type="button" class="btn btn-info" @click="agregarLapices">Vender unidad</button>
+
+                <p>Pluma:</p>
+                <p ref="pluma">0</p>
+                <button type="button" class="btn btn-info" @click="agregarPluma">Vender unidad</button>
+
+                <p>Borrador:</p>
+                <p ref="borrador">0</p>
+                <button type="button" class="btn btn-info" @click="agregarBorrador">Vender unidad</button>
+
+                <p>Sacapuntas:</p>
+                <p ref="sacapuntas">0</p>
+                <button type="button" class="btn btn-info" @click="agregarSacapuntas">Vender unidad</button>
+
+                <p>Libreta:</p>
+                <p ref="libreta">0</p>
+                <button type="button" class="btn btn-info" @click="agregarLibreta">Vender unidad</button>
+            </div>
+
+            <div class = "col">
+                <h4> Inventario </h4>
+                <p>Lapices:</p>
+                <p ref="lapicesIn">0</p>
+                <button type="button" class="btn btn-success" @click="autoLapices">Solicitar inventario</button>
+
+                <p>Pluma:</p>
+                <p ref="plumaIn">0</p>
+                <button type="button" class="btn btn-success" @click="autoPluma">Solicitar inventario</button>
+
+                <p>Borrador:</p>
+                <p ref="borradorIn">0</p>
+                <button type="button" class="btn btn-success" @click="autoBorrador">Solicitar inventario</button>
+
+                <p>Sacapuntas:</p>
+                <p ref="sacapuntasIn">0</p>
+                <button type="button" class="btn btn-success" @click="autoSacapuntas">Solicitar inventario</button>
+
+                <p>Libreta:</p>
+                <p ref="libretasIn">0</p>
+                <button type="button" class="btn btn-success" @click="autoLibreta">Solicitar inventario</button>
+            </div>
+
+            <div class = "col">
+                <h4> Imagen </h4>
+                <div>
+                    <img style="width:200px;height:150px;display: block;margin: 0 auto;" v-bind:src="imag">
+                </div>
+                <div>
+                    <h6>Nombre del autor: {{name}}</h6>
+                    <h6>Matricula del autor: {{matricula}}</h6>
+                    <h6>Titulo de la act: {{titulo}}</h6>
+                </div>
+            </div>
+          </div>
+
+        </div>
+        
+        <script src="actions.js"></script>
+
+    </body>
+</html>

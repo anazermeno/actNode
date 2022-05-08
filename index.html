@@ -27,33 +27,29 @@
           </nav>
       </div>
 
-        <div class = "container">
-            <h1> Tienda </h1>
-            
-
-          <div id="app" class = "row">
-            <div class = "col">
-                <h4> Categoría </h4>
-            </div>
-
-            <div class = "col">
-                <h4> Inventario </h4>
-            </div>
-
-            <div class = "col">
-                <h4> Imagen </h4>
-                <div>
-                    <img style="width:200px;height:150px;display: block;margin: 0 auto;" v-bind:src="imag">
-                </div>
-                <div>
-                    <h6>Nombre del autor: {{name}}</h6>
-                    <h6>Matricula del autor: {{matricula}}</h6>
-                    <h6>Titulo de la act: {{titulo}}</h6>
-                </div>
+      <div class="container" id="app">
+        <div class="row">
+          <div class="col">
+            <ul>
+              <li v-for="msg in bucl">
+                {{ msg.message }}
+              </li>
+          </ul>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-dark" v-on:click="showImage = !showImage">Click esconder imagen</button>
+            <hr>
+            <img v-if="!showImage" style="width:200px;height:150px;display: block;margin: 0 auto;" v-bind:src="imag">
+          </div>
+          <div class="col">
+            <div>
+              <h6>Nombre del autor: {{name}}</h6>
+              <h6>Matricula del autor: {{matricula}}</h6>
+              <h6>Titulo de la act: {{titulo}}</h6>
             </div>
           </div>
-
         </div>
+      </div>
         
         <script src="actions.js"></script>
 

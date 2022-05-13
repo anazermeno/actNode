@@ -2,6 +2,7 @@
 var mysql = require('mysql');
 // Consulta SQL.
 var sql = 'SELECT * FROM category LIMIT 10';
+let cat = [];
 
 // Parámetros de conexión a la base de datos.
 var con = mysql.createConnection({
@@ -26,6 +27,7 @@ con.connect(function(err) {
 
     // Bucle que recore los resultados y pinta en consola.
     for(i=0; i<result.length; i++){
+      cat[i] = result[i].name;
     	console.log("Result: " + result[i].name);
     }
 
